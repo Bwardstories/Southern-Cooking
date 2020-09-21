@@ -1,0 +1,508 @@
+/* Different font families 
+
+font-family: 'Alegreya Sans', sans-serif;   for most text 
+font-family: 'Great Vibes', cursive;          banner
+font-family: 'Work Sans', sans-serif;       for buttons
+ */
+
+
+ * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alegreya Sans', sans-serif;
+    
+}
+
+
+body{
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+li {
+    list-style: none;
+    font-weight: 800;
+}
+
+h2 {
+    text-decoration: underline;
+     font-size: 2em;
+ }
+
+
+/* ----------------------------------------HEADER STYLINGS-------------------------------------- */
+
+.main-header-wrapper-recipe {
+    box-shadow: 4px 4px 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    background-color:rgb(224, 222, 222);
+    position: fixed;
+    width: 100%;
+    border-bottom: 3px solid black;
+}
+
+.header-wrapper {
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.social-wrapper {
+    display: flex;
+    flex-direction: column;
+    }
+
+.social {
+    font-size: 0.9em;
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    font-size: 1.6em;
+    font-family: 'Great Vibes', cursive; 
+    color: black;
+    text-decoration: none;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 5;
+}
+
+.menu-wrapper {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    margin-top: 4px;
+}
+
+/* ---------------------------------HEADER STYLINGS ABOVE THIS---------------------------------- */
+
+ /* ---------------DROPDOWN MENU STYLINGS BELOW THIS-------------- */
+
+
+
+
+
+.button {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 10em;
+    height: 1.4em;
+    font-family: 'Work Sans', sans-serif;  
+    font-size: .7em;
+    background-color: transparent;
+    border: none;
+    transition-property: all;
+    transition: 1s;
+}
+
+.button:focus {
+    background-image: radial-gradient(white, rgb(224, 189, 148));
+}
+
+.button:hover {
+    background-image: radial-gradient(white, rgb(224, 189, 148));
+    box-shadow: 0 -2px 4px 2px black;
+    cursor: pointer;
+}
+
+.breakfast, .dinner, .dessert, .about{
+    position: relative;
+}
+
+.breakfast ul, .dinner ul, .dessert ul {
+    position: absolute;
+    /* margin-top: 15px; */
+    background-color: transparent;
+    width: 12.5rem;
+    height: 7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-15px);
+    transition: all 0.4s ease;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.breakfast a, .dinner a, .dessert a {
+    color: black;
+    text-decoration: none;
+}
+
+.breakfast a:hover, .dinner a:hover, .dessert a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.breakfast li, .dinner li, .dessert li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breakfast ul li:hover, .dinner ul li:hover, .dessert ul li:hover {
+    color: red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+}
+
+
+.breakfast button:focus + ul, .dinner button:focus + ul,  .dessert button:focus + ul{
+    opacity: 1;
+    background-color: white;
+    pointer-events: all;
+    transform: translateY(0px);
+    font-size: .65em;
+}
+
+/* -------------------------------------NEW CODE BELOW--------------------------------------- */
+
+.recipe-page-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 24em;
+}
+
+.recipe-page-image {
+    width: 36em;
+    height: 18em;
+    background-size: cover;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.background-image-wrapper {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 1) 25%, transparent), url("img/kitchen2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.recipe-section-wrapper {
+    width: 50%;
+    height: auto;
+    margin: 1% auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recipe-title {
+    margin: 5% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 1.6em;
+    letter-spacing: 4px;
+    width: 95%;
+    height: 3em;
+    background-image: radial-gradient(white, rgb(224, 189, 148));
+    text-decoration: underline;
+    /* margin-bottom: auto; */
+    border-radius: 12px;
+    border: 3px solid black;
+    justify-self: flex-start;
+}
+
+.ingredients-section {
+    margin: 5% 0;
+    display: flex;
+    width:100%;
+    height: 35%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: radial-gradient(white, rgb(224, 189, 148));
+    text-align: center;
+    padding: 10px;
+    border-radius: 12px;
+    border: 3px solid black;
+}
+
+.prep {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) ), url("img/footer.jpg");
+    border: 3px solid black;
+    border-radius: 10px;
+    color: black;
+    letter-spacing: 2px;
+}
+
+.directions {
+    margin: 5% 0;
+    background-image: radial-gradient(white, rgb(224, 189, 148));
+    border-radius: 12px;
+    border: 3px solid black;
+    font-weight: 800;
+    margin-bottom: 2%;
+    padding: 10px;
+}
+
+.recipe-directions {
+    font-size: 2.2em;
+    text-align: center;
+}
+  /* -------------------Social Media Button Stylings Below this line ------------------------------- */
+
+
+  .fa {
+    padding: .2em;
+    font-size: .6em;
+    width: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+      box-shadow: 2px 2px 4px 2px black;
+      cursor: pointer;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  /* ------------------------------Social Media Button Styles above this line-----------------*/
+
+
+
+/* ----------------------Footer Stylings Below this line ------------------------ */
+
+
+/* ----------------------Footer Stylings Below this line ------------------------ */
+
+
+.footer-recipe {
+    display: flex;
+    height: 40vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65) ), url("img/footer.jpg");
+    background-size: cover;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 4px solid black;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    width: 35%;
+    height: 25vh;
+    font-family: 'Alegreya Sans', sans-serif;
+    letter-spacing: 4px;
+}
+
+h2 {
+   text-decoration: underline;
+    font-size: 1.4em;
+}
+
+.mobile-filler {
+    display: none;
+}
+
+.filler {
+    display: flex;
+    align-items: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    color: white;
+    width: 20%;
+    height: 80%;
+    letter-spacing: 2px;
+    font-size: .8em;
+}
+
+.social2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 15%;
+    height: 40vh;
+    list-style:none;
+}
+
+.media-buttons {
+    padding: .35em;
+    font-size: 1.5em;
+    width: 1.1em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+  
+  .media-buttons:hover {
+    padding: .36em;
+    font-size: 1.6em;
+    width: 1.15em;
+    opacity: 1;
+    box-shadow: 4px 4px 4px 2px black;
+    cursor: pointer;
+  }
+
+  .fa2-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .fa2-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa2-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+/* -------------FOOTER STYLINGS ABOVE HERE ------------------*/
+
+.icon {
+    display: none;
+}
+
+
+@media (max-width: 1024px) {
+
+    .filler {
+        display: none;
+    }
+
+    .mobile-filler {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        display: flex;
+    }
+
+    .contact {
+        width: 70%;
+    }
+
+    /* -------------mobile header styings---------------- */
+    .main-header-wrapper-recipe {
+        display: none;
+    }
+
+/* --------mobile navbar stylings ------------ */
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 3em;
+    display: block;
+    text-align: center;
+    /* font-family: 'Great Vibes', cursive;   */
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: rgba(30, 221, 221,1);
+    color: white;
+  }
+
+  #myLinks {
+      font-size: .4em;
+      font-family: sans-serif;
+  }
+
+  .recipe-page-image {
+    width: 100%;
+    height: 24em;
+    background-size: cover;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.recipe-section-wrapper {
+    width: 85%;
+}
+
+.ingredients-section {
+    margin: 0;
+}
+
+
+
+}
+
+
+
+

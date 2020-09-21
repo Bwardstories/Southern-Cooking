@@ -1,0 +1,612 @@
+/* Different font families 
+
+font-family: 'Alegreya Sans', sans-serif;   for most text 
+font-family: 'Great Vibes', cursive;          banner
+font-family: 'Work Sans', sans-serif;       for buttons
+ */
+
+
+
+ * {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Alegreya Sans', sans-serif; */
+}
+
+body {
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+/* ----------------------------------------HEADER STYLINGS-------------------------------------- */
+
+
+.main-header-wrapper {
+    box-shadow: 4px 4px 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    background-color:rgb(224, 222, 222);
+    position: fixed;
+    width: 100%;
+    border-bottom: 3px solid black;
+}
+
+.header-wrapper {
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.social-wrapper {
+    display: flex;
+    flex-direction: column;
+    }
+
+.social {
+    font-size: 0.9em;
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    font-size: 1.6em;
+    font-family: 'Great Vibes', cursive; 
+    color: black;
+    text-decoration: none;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 5;
+}
+
+.menu-wrapper {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    margin-top: 4px;
+}
+
+/* ---------------------------------HEADER STYLINGS ABOVE THIS---------------------------------- */
+
+                     /* ---------------DROPDOWN MENU STYLINGS BELOW THIS-------------- */
+
+.button {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 10em;
+    height: 1.4em;
+    font-family: 'Work Sans', sans-serif;  
+    font-size: .7em;
+    background-color: transparent;
+    border: none;
+    transition-property: all;
+    transition: 1s;
+}
+
+.button:focus {
+    background-image: radial-gradient(white, rgb(224, 189, 148));
+}
+
+.button:hover {
+    background-image: radial-gradient(white, rgb(224, 189, 148));
+    box-shadow: 0 -2px 4px 2px black;
+    cursor: pointer;
+}
+
+.breakfast, .dinner, .dessert, .about{
+    position: relative;
+}
+
+.breakfast ul, .dinner ul, .dessert ul {
+    position: absolute;
+    /* margin-top: 15px; */
+    background-color: transparent;
+    width: 12.5rem;
+    height: 7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-15px);
+    transition: all 0.4s ease;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.breakfast a, .dinner a, .dessert a {
+    color: black;
+    text-decoration: none;
+}
+
+.breakfast a:hover, .dinner a:hover, .dessert a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.breakfast li, .dinner li, .dessert li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breakfast ul li:hover, .dinner ul li:hover, .dessert ul li:hover {
+    color: red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+}
+
+
+.breakfast button:focus + ul, .dinner button:focus + ul,  .dessert button:focus + ul{
+    opacity: 1;
+    background-color: white;
+    pointer-events: all;
+    transform: translateY(0px);
+    font-size: .65em;
+}
+
+                        /* --------------------DROPDOWN MENU STYLINGS----------------- */
+
+
+  /* -------------------Social Media Button Stylings Below this line ------------------------------- */
+
+
+.fa {
+    padding: .2em;
+    font-size: .6em;
+    width: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+      box-shadow: 2px 2px 4px 2px black;
+      cursor: pointer;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  /* ------------------------------Social Media Button Styles above this line-----------------*/
+
+
+  /* ------------MAIN IMAGE AND IMAGE SLIDER STYLINGS BELOW HERE------- */
+
+
+.image-wrapper {
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 23em;
+    justify-content: center;
+}
+
+
+
+.blur-wrapper {
+    background-image: url("img/alfredo.jpg");
+    width: 20%;
+    filter: blur(10px);
+    background-position: center;
+    background-size: 750%;
+    background-repeat: no-repeat;
+}
+
+/* ------------MAIN IMAGE AND IMAGE SLIDER STYLINGS ABOVE HERE------- */
+
+/* ------------FEATURED RECIPE STYLINGS BELOW THIS LINE--------------- */
+
+
+.featured-recipe-image {
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 60%;
+    background-image: url("img/alfredo.jpg");
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 10px solid gold;
+}
+
+.featured-recipe-wrapper {
+    display: flex;
+    justify-content: center;
+}  
+ 
+
+.featured-recipe-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: 47%;
+    height: 2.5em;
+    background-color:white;
+    border-radius: 10px;
+    font-size: 1.1em;
+    margin-top: -20px;
+    border: 4px solid #f8c4c3;
+}
+
+/* ------------FEATURED RECIPE STYLINGS ABOVE THIS LINE--------------- */
+
+  /* ---------------------------FEATURED BUTTON STYLINGS BELOW LINE ------------------------------- */
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 23em;
+}
+
+  .featured-button {
+    position: sticky;
+    width: 12em;
+    height: 1.6em;
+    z-index: 5;
+    border: none;
+    background-color: rgba(95, 255, 255, .6);
+    font-family: 'Work Sans', sans-serif; 
+    font-size: 1.1em; 
+    border-radius: 10px;  
+    transition: 0.3s;
+}
+
+.featured-button:hover {
+    background-color: rgb(95, 255, 255);
+    cursor: pointer;
+    box-shadow: 0 4px 2px 2px rgba(0, 0, 0,.6);
+}
+
+
+ /* ---------------------------FEATURED BUTTON STYLINGS ABOVE LINE ------------------------------- */
+
+ /* -------------------------------------------Card Stylings--------------------------------------------- */
+
+.card-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 1) 25%, transparent), url("img/kitchen.jpg");
+    background-size: cover;
+    height: 26em;
+    margin-top: -.5em;
+}
+
+.card {
+    width: 14em;
+    height: 14em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.6s;
+    transition-property: all;
+    border-radius: 10px; /* 10px rounded corners */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gold;
+  }
+
+.card-image {
+    height: 6em;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 10px  rgb(30, 221, 221);
+    width: 15em;
+    height: 15em;
+    }
+
+  /* Add rounded corners to the top left and the top right corner of the image */
+  img {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Add some padding inside the card container */
+  .card-content {
+      align-items: center;
+      justify-content: flex-end;
+      display: flex;
+      flex-grow: 2;
+      flex-direction: column;
+     padding: 2px 16px;
+  }
+
+  .card-title {
+      font-size: 1.1em;
+  }
+
+  .button2 {  
+      font-size: 1.1em;
+      margin-top: auto;
+      height: 1.6em;
+      width: 8em;
+      background-color: rgba(30, 221, 221,.6);
+      border-radius: 10px;
+      transition-property: all;
+      transition: 0.5s;
+  }
+
+  .button2:hover {
+    background-color: white;
+    display: block;
+    color: black;
+    cursor: pointer;
+  }
+
+  /* ----------------------------Recipe Card Stylings Above this line -------------------------------- */
+
+
+
+
+/* ----------------------Footer Stylings Below this line ------------------------ */
+
+
+.footer {
+    display: flex;
+    height: 40vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65) ), url("img/footer.jpg");
+    background-size: cover;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 4px solid black;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    width: 35%;
+    height: 25vh;
+    font-family: 'Alegreya Sans', sans-serif;
+    letter-spacing: 4px;
+}
+
+h2 {
+   text-decoration: underline;
+    font-size: 1.4em;
+}
+
+.filler {
+    display: flex;
+    align-items: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    color: white;
+    width: 35%;
+    height: 80%;
+    letter-spacing: 2px;
+    font-size: .8em;
+}
+
+.mobile-filler {
+    display: none;
+}
+
+.social2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 15%;
+    height: 40vh;
+    list-style:none;
+}
+
+.media-buttons {
+    padding: .35em;
+    font-size: 1.5em;
+    width: 1.1em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+  
+  .media-buttons:hover {
+    padding: .36em;
+    font-size: 1.6em;
+    width: 1.15em;
+    opacity: 1;
+    box-shadow: 4px 4px 4px 2px black;
+    cursor: pointer;
+  }
+
+  .fa2-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .fa2-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa2-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+/* -------------FOOTER STYLINGS ABOVE HERE ------------------*/
+
+
+/* --------------------------RESPONSIVE STYLINGS BELOW HERE ------------------------ */
+
+.icon {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+/* -----------mobile recipe card stylings----------- */
+
+    .card-wrapper {
+        flex-direction: column;
+        height: 60em;
+
+    }
+
+    .card {
+        width: 20em;
+        height: 15em;
+    }
+
+    .card-image {
+        height: 8em;
+    }
+
+    /* -------------mobile featured recipe stylings --------------- */
+
+
+    .blur-wrapper{
+        display: none;
+    }
+
+    .featured-recipe-image {
+        width: 100%;
+    }
+
+    .featured-recipe-banner {
+        width: 80%;
+        height: 4em;
+    }
+
+/* ------------------mobile footer stylings ----------------- */
+    .filler {
+        display: none;
+    }
+
+    .mobile-filler {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        display: flex;
+    }
+
+    .contact {
+        width: 70%;
+    }
+/* -------------mobile header styings---------------- */
+    .main-header-wrapper {
+        display: none;
+    }
+
+/* --------mobile navbar stylings ------------ */
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 3em;
+    display: block;
+    text-align: center;
+    /* font-family: 'Great Vibes', cursive;   */
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: rgba(30, 221, 221,1);
+    color: white;
+  }
+
+  #myLinks {
+      font-size: .4em;
+      font-family: sans-serif;
+  }
+
+   .image-wrapper {
+       position: relative;
+       top: 0;
+   }
+
+   .button-wrapper {
+       padding-top: 1em;
+   }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
